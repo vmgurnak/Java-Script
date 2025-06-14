@@ -21,15 +21,21 @@ function handlerFormSubmit(event) {
   // console.log(event.currentTarget.elements);
 
   //   Дескруктуризация, свойство DOM-элемента формы объекта с элементами
-  const { email, password } = event.currentTarget.elements;
+  // const { email, password } = event.currentTarget.elements;
+  const { email, password } = event.currentTarget;
+
+  // const formData = new FormData(event.currentTarget);
+  const formData = new FormData(loginForm);
+  console.log(formData);
+  console.log(Object.fromEntries(formData));
 
   // Проверка на пустые строки, вывод alert или объекта с данными Email, Password
   if (!email.value.trim() || !password.value.trim()) {
     alert('Please fill in all the fields!');
   } else {
     console.log({
-      [email]: email.value,
-      [password]: password.value,
+      email: email.value,
+      password: password.value,
     });
     // Очистка полей формы после отправки
     event.currentTarget.reset();

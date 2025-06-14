@@ -59,6 +59,8 @@ function createBoxes(amount) {
     // Создание разметки с помощью шаблонных строк и boxes.insertAdjacentHTML("beforeend", markup)
     const item = `<div style="width: ${widht}px;height: ${heigth}px;background-color: ${color};"></div>`;
     markup += item;
+
+    console.log(markup);
   }
 
   // // Добавление разметки в DOM с распылением значений массива элементов разметки
