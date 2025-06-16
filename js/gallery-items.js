@@ -1,6 +1,6 @@
-export { galleryItems };
+// export { galleryItems };
 
-const galleryItems = [
+export const galleryItems = [
   {
     preview:
       'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg',
