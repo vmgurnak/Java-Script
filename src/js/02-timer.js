@@ -30,6 +30,8 @@ const elements = {
 };
 const { inputDate, btnStart, btnStop, day, hour, minute, second } = elements;
 
+// const fp = flatpickr(inputDate, options);
+
 btnStart.setAttribute('disabled', '');
 btnStop.setAttribute('disabled', '');
 
@@ -52,7 +54,9 @@ const options = {
   },
 };
 
-flatpickr(inputDate, options);
+const fp = flatpickr(inputDate, options);
+
+// flatpickr(inputDate, options);
 
 btnStart.addEventListener('click', handlerStart);
 btnStop.addEventListener('click', handlerStop);
@@ -61,6 +65,9 @@ function handlerStart() {
   btnStart.setAttribute('disabled', '');
   btnStop.removeAttribute('disabled', '');
   inputDate.setAttribute('disabled', '');
+
+  // Отключаем инпут и Flatpickr
+  fp.input.disabled = true;
 
   timerId = setInterval(() => {
     const currentDate = Date.now();

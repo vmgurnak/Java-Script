@@ -43,10 +43,15 @@ function handlerSubmit(event) {
   // Отмена действий по умолчанию при отправке формы
   event.preventDefault();
 
+  // // Значения input формы в числовом формате
+  // let delay = Number(event.currentTarget.elements.delay.value);
+  // const step = Number(event.currentTarget.elements.step.value);
+  // const amount = Number(event.currentTarget.elements.amount.value);
+
   // Значения input формы в числовом формате
-  let delay = Number(event.currentTarget.elements.delay.value);
-  const step = Number(event.currentTarget.elements.step.value);
-  const amount = Number(event.currentTarget.elements.amount.value);
+  let delay = Number(event.currentTarget.delay.value);
+  const step = Number(event.currentTarget.step.value);
+  const amount = Number(event.currentTarget.amount.value);
 
   // Цикл для вызова функции createPromise amount раз
   for (let i = 1; i <= amount; i += 1) {
