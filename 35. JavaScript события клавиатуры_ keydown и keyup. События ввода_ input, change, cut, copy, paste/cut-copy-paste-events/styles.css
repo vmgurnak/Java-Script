@@ -1,0 +1,23 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  background-color: lightgray;
+}
+
+input {
+  transition-duration: 0.15s;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 4px 4px 4px rgb(0 0 0 / 0.5);
+}
+
+input {
+  font: inherit;
+  border: 2px solid black;
+}
+
+input.is-invalid {
+  border-color: red;
+}

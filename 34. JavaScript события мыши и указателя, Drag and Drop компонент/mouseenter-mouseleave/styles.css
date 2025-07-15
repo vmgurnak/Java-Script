@@ -1,0 +1,20 @@
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+  display: inline-flex;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.box-1 { background-color: lightsalmon }
+.box-2 { background-color: cornflowerblue }
+.box-3 { background-color: pink }
+
+.button {
+  margin: 10px;
+}

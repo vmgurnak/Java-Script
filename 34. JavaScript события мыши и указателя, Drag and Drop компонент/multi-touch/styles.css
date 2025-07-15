@@ -1,0 +1,27 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #bdc1c7;
+  font-size: 24px;
+}
+
+.circle {
+  position: absolute;
+  width: 50px;
+  aspect-ratio: 1;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  translate: -50% -50%;
+  user-select: none;
+}
+
+.circle.red {
+  background-color: red;
+}
+
+.circle__label {
+  position: absolute;
+  bottom: -5%;
+  left: 105%;
+  pointer-events: none;
+  user-select: none;
+}

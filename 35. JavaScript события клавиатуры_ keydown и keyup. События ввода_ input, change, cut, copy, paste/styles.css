@@ -1,0 +1,40 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  background-color: lightgray;
+}
+
+input {
+  font: inherit;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: lightsteelblue;
+  transition-duration: 0.15s;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 4px 4px 4px rgb(0 0 0 / 0.5);
+}
+
+input.is-invalid {
+  border-color: red;
+}
+
+#error-message:empty {
+  display: none;
+}
+
+#error-message {
+  display: block;
+  color: red;
+  font-size: 0.8em;
+}
+
+.name-output:not(:empty)::before {
+  content: ', ';
+}
+
+.name-output:not(:empty)::after {
+  content: '!';
+}
