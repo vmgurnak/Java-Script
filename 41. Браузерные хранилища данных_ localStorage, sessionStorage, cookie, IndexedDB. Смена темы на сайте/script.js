@@ -1,8 +1,15 @@
-sessionStorage.setItem('username', 'Aleksander')
-sessionStorage.setItem('age', '28')
+// Cookie
 
-console.log('sessionStorage до очищения:', sessionStorage)
+console.log('cookie', document.cookie);
 
-sessionStorage.clear()
+console.log((document.cookie = 'date=Date'));
+console.log((document.cookie = 'age=28'));
 
-console.log('sessionStorage после очищения:', sessionStorage)
+sessionStorage.setItem('username', 'Aleksander');
+sessionStorage.setItem('age', '28');
+
+console.log('sessionStorage до очищения:', sessionStorage);
+
+sessionStorage.clear();
+
+console.log('sessionStorage после очищения:', sessionStorage);
