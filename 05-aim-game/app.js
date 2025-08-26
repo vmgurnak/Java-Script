@@ -52,7 +52,15 @@ function setTime(value) {
 
 function finishGame() {
   timeEl.parentNode.classList.add('hide');
-  board.innerHTML = `<h1>Score: <span class="primary">${score}</span></h1>`;
+  board.innerHTML = `<h1>Score: <span class="primary">${score}</span></h1><a href="#" class="start" id="again-game">Play again</a>`;
+
+  const againGame = document.querySelector('#again-game');
+  againGame.addEventListener('click', (event) => {
+    event.preventDefault();
+    screens[0].classList.remove('up');
+    screens[1].classList.remove('up');
+    board.innerHTML = '';
+  });
 }
 
 function createRandomCircle() {
