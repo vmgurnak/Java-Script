@@ -1,7 +1,5 @@
-const addToHistoryButtonElement = document
-  .getElementById('add-to-history')
-const showHistoryButtonElement = document
-  .getElementById('show-history')
+const addToHistoryButtonElement = document.getElementById('add-to-history');
+const showHistoryButtonElement = document.getElementById('show-history');
 
 addToHistoryButtonElement.addEventListener('click', () => {
   window.history.pushState(
@@ -10,9 +8,19 @@ addToHistoryButtonElement.addEventListener('click', () => {
     },
     '',
     './catalog.html'
-  )
-})
+  );
+});
+
+// addToHistoryButtonElement.addEventListener('click', () => {
+//   window.history.replaceState(
+//     {
+//       example: 'Какой-то текст',
+//     },
+//     '',
+//     './catalog.html'
+//   );
+// });
 
 showHistoryButtonElement.addEventListener('click', () => {
-  console.log('history:', window.history)
-})
+  console.log('history:', window.history);
+});
